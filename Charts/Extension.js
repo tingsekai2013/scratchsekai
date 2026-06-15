@@ -1,14 +1,20 @@
 (function(Scratch) {
     'use strict';
 
-    let startTime = Date.now();
-    let hasFired45 = false; // Tracks if the 4.5-second event has already played
+    if (!Scratch || !Scratch.extensions) {
+        return;
+    }
 
-    class RhythmTimerExtension {
+    let startTime = Date.now();
+    // A set to remember which timestamps have already fired during this run
+    let firedTimestamps = new Set(); 
+
+    class DynamicRhythmTimer {
         getInfo() {
             return {
-                id: 'rhythmtimer',
+                id: 'dynamicrhythmtimer',
                 name: 'Rhythm Timer',
+                color1: '#2DA44E', // A fresh green color for your rhythm blocks
                 blocks: [
                     {
                         opcode: 'getMusicTimer',
@@ -21,10 +27,16 @@
                         text: 'reset music timer'
                     },
                     {
-                        opcode: 'whenMusicTimerHits45',
+                        opcode: 'whenMusicTimerHits',
                         blockType: Scratch.BlockType.HAT,
-                        text: 'when music timer hits 4.5s',
-                        isEdgeActivated: true
+                        text: 'when music timer hits [SECONDS]s',
+                        isEdgeActivated: true,
+                        arguments: {
+                            SECONDS: {
+                                type: Scratch.ArgumentType.NUMBER,
+                                defaultValue: 4.5
+                            }
+                        }
                     }
                 ]
             };
@@ -36,18 +48,21 @@
 
         resetMusicTimer() {
             startTime = Date.now();
-            hasFired45 = false; // Reset the trigger so it can happen again next song/attempt
+            firedTimestamps.clear(); // Clears all spent notes so the song can restart perfectly
         }
 
-        // This checks every frame. The moment it crosses 4.5, it fires ONCE.
-        whenMusicTimerHits45() {
-            if (!hasFired45 && this.getMusicTimer() >= 4.5) {
-                hasFired45 = true; // Instantly lock it so it doesn't repeat
-                return true; // Fires the hat block
+        whenMusicTimerHits(args) {
+            const targetTime = Number(args.SECONDS);
+            const currentTime = this.getMusicTimer();
+
+            // If this specific timestamp hasn't fired yet, and the timer has reached/passed it
+            if (!firedTimestamps.has(targetTime) && currentTime >= targetTime) {
+                firedTimestamps.add(targetTime); // Lock this timestamp so it never fires again this run
+                return true; // Fire the Hat block!
             }
             return false;
         }
     }
 
-    Scratch.extensions.register(new RhythmTimerExtension());
+    Scratch.extensions.register(new DynamicRhythmTimer());
 })(Scratch);
