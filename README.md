@@ -1,5 +1,6 @@
 # scratchSekai!
 Join the discord!
+
 [![Discord](https://img.shields.io/badge/Discord-scratchSekai!)](https://)
 
 
