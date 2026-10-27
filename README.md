@@ -17,6 +17,8 @@ and no is not java related.
 - [ ] ranked matches
 - [ ] storys
 - [x] tips
+- [x] load custom plugins
+- [x] online functions
 - [ ] change speeds
 - [x] lite version
 - [x] mobile support
