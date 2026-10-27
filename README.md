@@ -12,6 +12,7 @@ and no is not java related.
 - third-party game assets/music remain property of their respective owners and are not covered by the MIT license.
 ### features
 
+- [ ] Propper Sekai Ui/Rendering
 - [x] stage
 - [ ] co-op
 - [ ] ranked matches
