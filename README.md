@@ -13,6 +13,7 @@ and no is not java related.
 ### features
 
 - [ ] Propper Sekai Ui/Rendering
+- [x] wip Live2D
 - [x] stage
 - [ ] co-op
 - [ ] ranked matches
