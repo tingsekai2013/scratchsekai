@@ -15,7 +15,7 @@ and no is not java related.
 - [x] stage
 - [ ] co-op
 - [ ] ranked matches
-- [ ] storys
+- [ ] stories
 - [x] tips
 - [x] load custom plugins
 - [x] online functions
