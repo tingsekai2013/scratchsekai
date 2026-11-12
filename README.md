@@ -26,7 +26,7 @@ and no is not java related.
 - [x] mobile support
 - [ ] muti finger support
 - [x] chart editor
+- [ ] importing .sus or .usc
 - [ ] importing Sonolus leveldata(will take a while)
-- [ ] importing .sus or .usc(will take a while)
 - [ ] importing .mmws .ccmmw .unchmmw or .mmw(will take a while)
 - [ ] importing .nova or loading pjsk charts(might be impossible but might work)
