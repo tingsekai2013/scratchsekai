@@ -12,7 +12,7 @@ and no is not java related.
 - third-party game assets/music remain property of their respective owners and are not covered by the MIT license.
 ### features
 
-- [ ] Propper Sekai Ui/Rendering
+- [x] Propper Sekai Ui/Rendering
 - [x] wip Live2D
 - [x] stage
 - [ ] co-op
@@ -21,12 +21,12 @@ and no is not java related.
 - [x] tips
 - [x] load custom plugins
 - [x] online functions
-- [ ] change speeds
+- [x] change speeds
 - [x] lite version
 - [x] mobile support
-- [ ] muti finger support
+- [x] muti finger support
 - [x] chart editor
-- [ ] importing .sus or .usc
+- [x] importing .sus or .usc
 - [ ] importing Sonolus leveldata(will take a while)
 - [ ] importing .mmws .ccmmw .unchmmw or .mmw(will take a while)
-- [ ] importing .nova or loading pjsk charts(might be impossible but might work)
+- [x] importing .nova or loading pjsk charts(might be impossible but might work)
