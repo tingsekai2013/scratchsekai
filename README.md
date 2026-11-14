@@ -7,7 +7,7 @@ Join the discord!
 RetroSekai but in scratch!
 This repo will be used as the storage for online functions of ScratchSekai!
 and the downloads!
-and no is not java related.
+and no is not java related(edit okay it kinda is..)
 
 - third-party game assets/music remain property of their respective owners and are not covered by the MIT license.
 ### features
