@@ -1,11 +1,11 @@
-# scratchSekai!
+# ScratchSekai!
 Join the discord!
 
 [![Discord](https://img.shields.io/badge/Discord-scratchSekai!)](https://)
 
 
 RetroSekai but in scratch!
-This repo will be used as the storage for online functions of scratchSekai!
+This repo will be used as the storage for online functions of ScratchSekai!
 and the downloads!
 and no is not java related.
 
@@ -26,7 +26,8 @@ and no is not java related.
 - [x] mobile support
 - [x] muti finger support
 - [x] chart editor
+- [x] load pjsk charts and play them
 - [x] importing .sus or .usc
 - [ ] importing Sonolus leveldata(will take a while)
 - [ ] importing .mmws .ccmmw .unchmmw or .mmw(will take a while)
-- [x] importing .nova or loading pjsk charts(might be impossible but might work)
+- [ ] importing .nova chart files(will take a while)
